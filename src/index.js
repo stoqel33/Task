@@ -2,6 +2,10 @@ import Splide from "@splidejs/splide";
 import "./sass/index.sass";
 import "focus-visible";
 
+const clientWidth = document.body.clientWidth;
+document.getElementById("wrapper").style.width = `${clientWidth}px`;
+document.getElementById("nav-bar").style.width = `${clientWidth}px`;
+
 if (document.body.clientWidth <= 1025) {
   new Splide("#splide", {
     perPage: 2,
