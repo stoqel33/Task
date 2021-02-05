@@ -1,125 +1,36 @@
 .header
-  height: 100vh
-  @media screen and ( max-width: 1024px )
-    height: 80rem
-  @media screen and ( max-width: 768px )
-    height: 150rem
-    margin-bottom: 1rem
-  @media screen and ( max-width: 425px )
-    height: 130vh
+  height: 130vh
+  @media screen and ( min-width: 481px )
+    height: 150vh
+  @media screen and ( min-width: 641px )
+    height: 190vh
+  @media screen and ( min-width: 961px )
+    height: 190vh
+  @media screen and ( min-width: 1025px )
+    height: 140vh
+  @media screen and ( min-width: 1600px )
+    height: 120vh
   &__wrapper
     position: relative
     height: 100%
-  &--bg-sq-1
-    position: absolute
-    top: -113%
-    left: -15%
-    width: 200rem
-    height: 200rem
-    transform: rotate(17deg)
-    background-color: #3947B6
-    border-radius: 5%
-    box-shadow: 0px 11px 106px #2A389D
-    z-index: 30
-    @media screen and ( max-width: 1440px )
-      width: 200rem
-      height: 200rem
-      top: -169rem
-      left: -64rem
-    @media screen and ( max-width: 1024px )
-      width: 120rem
-      height: 120rem
-      top: -95rem
-      left: -26rem
-    @media screen and ( max-width: 768px )
-      width: 100rem
-      height: 100rem
-      top: -36rem
-      left: 0
-    @media screen and ( max-width: 425px )
-      width: 60rem
-      height: 50rem
-      top: -12rem
-      left: -9%
-      transform: rotate(13deg)
-  &--bg-sq-2
-    position: absolute
-    background-color: #4250BF
-    top: -100%
-    left: -50%
-    width: 200rem
-    height: 200rem
-    transform: rotate(17deg)
-    border-radius: 5%
-    box-shadow: 0px 4px 130px #263396
-    z-index: 20
-    @media screen and ( max-width: 1440px )
-      width: 120rem
-      height: 120rem
-      top: -50rem
-      left: -42rem
-    @media screen and ( max-width: 1024px )
-      width: 120rem
-      height: 120rem
-      top: -60rem
-      left: -65rem
-    @media screen and ( max-width: 768px )
-      width: 80rem
-      height: 80rem
-      top: 12rem
-      left: -38rem
-      border-radius: 10%
-    @media screen and ( max-width: 425px )
-      width: 50rem
-      height: 50rem
-      top: 13rem
-      left: -74%
-      border-radius: 20%
-  &--bg-sq-3
-    position: absolute
-    top: -70%
-    left: 38%
-    width: 200rem
-    height: 200rem
-    transform: rotate(17deg) skew(-45deg)
-    background: linear-gradient(85.66deg, #3847B5 41.37%, #253194 97.44%)
-    border-radius: 3%
-    z-index: 5
-    @media screen and ( max-width: 1440px )
-      width: 120rem
-      height: 120rem
-      top: -25rem
-      left: 71rem
-    @media screen and ( max-width: 1024px )
-      width: 120rem
-      height: 120rem
-      top: -30rem
-      left: 71rem
-    @media screen and ( max-width: 768px )
-      width: 80rem
-      height: 80rem
-      top: 21rem
-      left: 38%
-      transform: rotate(108deg) skew(0)
-    @media screen and ( max-width: 425px )
-      width: 50rem
-      height: 50rem
-      top: 20rem
   &__content
     position: absolute
     top: 20%
     left: 15%
     z-index: 50
-    @media screen and ( max-width: 1024px )
-      top: 15%
-      left: 14%
-    @media screen and ( max-width: 768px )
-      top: 13%
-      left: 10%
-    @media screen and ( max-width: 425px )
-      top: 10rem
-      left: 0
+    width: 100vw
+    left: 0
+    padding-top: 10%
+    top: 10rem
+    @media screen and ( min-width: 390px )
       width: 100vw
+      left: 0
+      padding-top: 10%
+      top: 5rem
+    @media screen and ( min-width: 641px )
+      top: 8rem
+    @media screen and ( min-width: 1600px )
+      margin-left: 10%
     &__info
       display: flex
       flex-direction: column
@@ -127,10 +38,17 @@
       @media screen and ( max-width: 425px )
         width: 100%
         margin: 0 5%
+      @media screen and ( min-width: 320px )
+        width: 100%
+        margin: 0 5%
       &--wrapper
         width: 50rem
         @media screen and ( max-width: 425px )
           width: 28.7rem
+        @media screen and ( min-height: 320px )
+          width: 28.7rem
+        @media screen and ( min-width: 641px )
+          width: 50rem
       &--title
         font-size: 4rem
         line-height: 5.6rem
@@ -156,6 +74,18 @@
           & > span::before
             content: "\A"
             white-space: pre
+        @media screen and ( min-width: 320px )
+          font-size: 2.4rem
+          line-height: 3.2rem
+          & > span::before
+            content: "\A"
+            white-space: pre
+        @media screen and ( min-width: 641px )
+          margin-bottom: 0
+          font-size: 4rem
+          line-height: 5.6rem
+          & > span::before
+            content: none
 
       &--container
         position: relative
@@ -165,6 +95,15 @@
           flex-direction: column
           margin-top: 1rem
           margin-right: 10%
+        @media screen and ( min-width: 320px )
+          display: flex
+          flex-direction: column
+          margin-top: 1rem
+          margin-right: 10%
+        @media screen and ( min-width: 641px )
+          margin-top: 2rem
+        @media screen and ( min-width: 1025px )
+          width: 56rem
       &--label
         margin-left: 0.5rem
         font-size: 1.8rem
@@ -175,6 +114,12 @@
         @media screen and ( max-width: 425px )
           margin-top: 4.8rem
           font-size: 1.4rem
+        @media screen and ( min-width: 320px )
+          margin-top: 4.8rem
+          font-size: 1.4rem
+        @media screen and ( min-width: 641px )
+          font-size: 1.8rem
+          margin-top: 7rem
       &--input
         width: 100%
         height: 4.7rem
@@ -185,6 +130,9 @@
         outline: none
         @media screen and ( max-width: 425px )
           padding: 0 0 0 2rem
+        @media screen and ( min-width: 320px  )
+          padding: 0 0 0 2rem
+
       &--submit
         position: absolute
         right: 0
@@ -196,18 +144,24 @@
         border-radius: 5rem
         border: none
         cursor: pointer
-        @media screen and ( max-width: 425px )
+        @media screen and ( min-width: 320px )
           position: static
           height: 4.7rem
           margin-top: 1.6rem
           width: 100%
+        @media screen and ( min-width: 641px )
+          position: absolute
+          right: 0
+          width: 15.4rem
+          height: 100%
+          font-size: 1.7rem
+          margin: 0
   &__video
-    position: relative
     position: absolute
-    width: 55rem
-    height: 38rem
-    top: 15%
-    left: 70%
+    top: 65rem
+    left: 50%
+    width: 28.8rem
+    height: 20rem
     transform: translateX(-50%)
     background: url("../images/surfer1.png") no-repeat
     background-size: contain
@@ -215,29 +169,33 @@
     @media (-webkit-min-device-pixel-ratio: 2)
       background: url("../images/surfer@x2.png") no-repeat
       background-size: contain
-    @media screen and ( max-width: 1440px )
-      left: 77%
-    @media screen and ( max-width: 1024px )
-      width: 28.8rem
-      height: 20rem
-      left: 80%
-    @media screen and ( max-width: 768px )
+    @media screen and ( min-width: 481px )
+      height: 26rem
+      width: 38rem
+      top: 74rem
+    @media screen and ( min-width: 641px )
       width: 55rem
       height: 38rem
-      top: 85%
-      left: 50%
-      transform: translate(-50%, -50%)
-      background-size: contain
-    @media screen and ( max-width: 425px )
-      width: 28.8rem
-      height: 20rem
-
+      top: 100rem
+    @media screen and ( min-width: 961px )
+      top: 103rem
+    @media screen and ( min-width: 1025px )
+      width: 36.8rem
+      height: 25rem
+      left: 75%
+      top: 15rem
+    @media screen and ( min-width: 1281px )
+      left: 70%
+      width: 55rem
+      height: 38rem
+    @media screen and ( min-width: 1600px )
+      left: 80%
     &__button
       position: relative
       top: 50%
       left: 50%
-      width: 6.5rem
-      height: 6.5rem
+      width: 3.2rem
+      height: 3.2rem
       transform: translate(-50%,-50%)
       background-color: #38A5DB
       border-radius: 50%
@@ -252,16 +210,18 @@
         top: 50%
         left: 50%
         transform: translate(-40%,-50%)
-        border-top: 1rem solid transparent
-        border-bottom: 1rem solid transparent
-        border-left: 1.6rem solid white
-      @media screen and ( max-width: 425px )
-        width: 3.2rem
-        height: 3.2rem
+        border-top: 0.5rem solid transparent
+        border-bottom: 0.5rem solid transparent
+        border-left: 0.9rem solid white
+      @media screen and ( min-width: 641px )
+        top: 50%
+        left: 50%
+        width: 6.5rem
+        height: 6.5rem
         &::after
-          border-top: 0.5rem solid transparent
-          border-bottom: 0.5rem solid transparent
-          border-left: 0.9rem solid white
+          border-top: 1rem solid transparent
+          border-bottom: 1rem solid transparent
+          border-left: 1.6rem solid white
   &__button
     position: absolute
     top: 75%
@@ -272,43 +232,49 @@
     background: url("../images/arrow.svg")
     border: none
     cursor: pointer
-    z-index: 30
-    @media screen and ( max-width: 768px )
-      top: 85rem
-    @media screen and ( max-width: 425px )
-      width: 3rem
-      height: 3rem
-      top: 53rem
-      background-size: contain
+    z-index: 50
+    width: 3rem
+    height: 3rem
+    top: 53rem
+    background-size: contain
+    @media screen and ( min-width: 641px )
+      top: 50%
+      height: 6rem
+      width: 6rem
+    @media screen and ( min-width: 1025px )
+      top: 65%
+    @media screen and ( min-width: 1600px )
+      top: 75%
   &__icon
     position: fixed
     right: 8%
-    width: 4rem
-    height: 4rem
+    width: 3rem
+    height: 3rem
     cursor: pointer
     z-index: 100
+    background-size: contain
+
     @media screen and ( max-width: 768px )
       right: 2%
+
     &--twitter
-      top: 63%
+      right: 7%
+      bottom: 10rem
       background: url("../images/twitter.svg")
-      @media screen and ( max-width: 768px )
-        top: 70%
-      @media screen and ( max-width: 425px )
-        width: 3rem
-        height: 3rem
-        top: 77%
-        right: 7%
+      background-size: contain
+      @media screen and ( min-width: 641px )
         background-size: contain
+        right: 7%
+        width: 4rem
+        height: 4rem
 
     &--fb
-      top: 69%
+      right: 7%
+      bottom: 6rem
       background: url("../images/facebook.svg")
-      @media screen and ( max-width: 768px )
-        top: 75.5%
-      @media screen and ( max-width: 425px )
-        width: 3rem
-        height: 3rem
-        top: 83%
+      background-size: contain
+      @media screen and ( min-width: 641px )
         right: 7%
-        background-size: contain
+        width: 4rem
+        height: 4rem
+        bottom: 4rem

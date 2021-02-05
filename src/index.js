@@ -2,21 +2,17 @@ import Splide from "@splidejs/splide";
 import "./sass/index.sass";
 import "focus-visible";
 
-const clientWidth = document.body.clientWidth;
-document.getElementById("wrapper").style.width = `${clientWidth}px`;
-document.getElementById("nav-bar").style.width = `${clientWidth}px`;
-
-if (document.body.clientWidth <= 1025) {
+if (document.body.clientWidth <= 1281) {
   new Splide("#splide", {
-    perPage: 2,
+    perPage: 1,
     perMove: 1,
     arrows: false,
     breakpoints: {
-      1025: {
-        perPage: 1,
+      961: {
+        pagination: false,
       },
-      769: {
-        perPage: 1,
+      667: {
+        pagination: true,
       },
     },
   }).mount();
