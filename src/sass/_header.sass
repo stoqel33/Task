@@ -1,15 +1,17 @@
 .header
-  height: 130vh
+  height: 88rem
   @media screen and ( min-width: 481px )
-    height: 150vh
+    height: 100rem
   @media screen and ( min-width: 641px )
-    height: 190vh
-  @media screen and ( min-width: 961px )
-    height: 190vh
+    height: 140rem
+  // @media screen and ( min-width: 961px )
+  //   height: 190vh
   @media screen and ( min-width: 1025px )
-    height: 140vh
-  @media screen and ( min-width: 1600px )
-    height: 120vh
+    height: 100rem
+  @media screen and ( min-width: 1281px )
+    height: 110rem
+  // @media screen and ( min-width: 1600px )
+  //   height: 120vh
   &__wrapper
     position: relative
     height: 100%
@@ -22,32 +24,32 @@
     left: 0
     padding-top: 10%
     top: 10rem
-    @media screen and ( min-width: 390px )
+    @media screen and ( min-width: 390px ) and (orientation: landscape)
       width: 100vw
       left: 0
       padding-top: 10%
       top: 5rem
-    @media screen and ( min-width: 641px )
+    @media screen and ( min-device-width: 390px ) and (max-device-width: 767px) and (orientation: landscape)
+      padding-top: 7%
+    @media screen and ( min-width: 641px ) and (orientation: portrait)
       top: 8rem
+    @media screen and ( min-width: 1440px )
+      margin-left: 10%
+
     @media screen and ( min-width: 1600px )
       margin-left: 10%
     &__info
       display: flex
       flex-direction: column
       width: 56rem
-      @media screen and ( max-width: 425px )
-        width: 100%
-        margin: 0 5%
       @media screen and ( min-width: 320px )
         width: 100%
         margin: 0 5%
       &--wrapper
-        width: 50rem
-        @media screen and ( max-width: 425px )
-          width: 28.7rem
-        @media screen and ( min-height: 320px )
-          width: 28.7rem
-        @media screen and ( min-width: 641px )
+        width: 28.7rem
+        @media screen and ( min-width: 320px ) and (orientation: landscape)
+          width: 80%
+        @media screen and ( min-width: 641px ) and (orientation: portrait)
           width: 50rem
       &--title
         font-size: 4rem
@@ -149,7 +151,12 @@
           height: 4.7rem
           margin-top: 1.6rem
           width: 100%
-        @media screen and ( min-width: 641px )
+        @media screen and ( min-device-width: 320px ) and ( max-device-width: 767px) and (orientation: landscape)
+          position: static
+          height: 4.7rem
+          margin-top: 1.6rem
+          width: 100%
+        @media screen and ( min-width: 641px ) and (orientation: portrait)
           position: absolute
           right: 0
           width: 15.4rem
@@ -188,8 +195,11 @@
       left: 70%
       width: 55rem
       height: 38rem
+    @media screen and ( min-width: 1410px )
+      left: 75%
     @media screen and ( min-width: 1600px )
       left: 80%
+      top: 18rem
     &__button
       position: relative
       top: 50%
