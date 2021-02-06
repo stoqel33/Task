@@ -9,7 +9,7 @@ module.exports = {
     main: "./src/index.js",
   },
   output: {
-    filename: "[name]-[contenthash:5].js",
+    filename: "[name]-[contenthash:4].js",
     path: path.resolve(__dirname, "../", "build"),
   },
   module: {
@@ -24,7 +24,7 @@ module.exports = {
           {
             loader: "file-loader",
             options: {
-              name: "[name]-[contenthash:5].[ext]",
+              name: "[name]-[contenthash:4].[ext]",
               outputPath: "images",
               publicPath: "images",
             },
@@ -66,7 +66,7 @@ module.exports = {
       template: "src/templates/template.html",
     }),
     new MiniCssExtractPlugin({
-      filename: "[name]-[contenthash:5].css",
+      filename: "[name]-[contenthash:4].css",
     }),
   ],
 };
